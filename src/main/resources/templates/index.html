@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<table class="table table-striped" border="1" cellspacing="0" cellpadding="15">
+                <thead>
+                <tr>
+                     
+                   	<!--    th>Id</th -->
+	
+					  <th >OrderId</th>
+					
+					 <th>Level</th>
+					
+					 <th>Code</th>
+					
+					  <th>Parent</th>
+					
+					 <th>Description</th>
+					
+					  <th>This item includes</th>
+					
+					 <th>This item also includes</th>
+					
+					  <th>Rulings</th>
+					
+					  <th>This item excludes</th>
+					
+					 <th>Reference to ISIC Rev. 4</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                    <tr th:each="nomenclatures : ${list}">
+						
+						 
+	  <!--td  th:text="${nomenclatures.id}"></td -->
+	
+	  <td  th:text="${nomenclatures.orderId}"></td>
+	
+	 <td th:text="${nomenclatures.level}"></td>
+	
+	 <td th:text="${nomenclatures.code}"></td>
+	
+	  <td th:text="${nomenclatures.parent}"></td>
+	
+	 <td th:text="${nomenclatures.description}"></td>
+	
+	  <td th:text="${nomenclatures.itemIncludes}"></td>
+	
+	 <td th:text="${nomenclatures.itemAlsoIncludes}"></td>
+	
+	  <td th:text="${nomenclatures.rulings}"></td>
+	
+	  <td th:text="${nomenclatures.itemExcludes}"></td>
+	
+	 <td th:text="${nomenclatures.referenceToISIC}"></td>
+	
+                    </tr>   
+
+                </tbody>
+</table>
+
+</body>
+</html>
