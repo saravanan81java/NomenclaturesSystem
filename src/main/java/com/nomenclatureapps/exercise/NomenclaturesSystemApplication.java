@@ -6,10 +6,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.nomenclatureapps.exercise.service.NomencaltureService;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 @SpringBootApplication
+@EnableSwagger2
+@EnableWebMvc
 public class NomenclaturesSystemApplication extends SpringBootServletInitializer{
 
 	public static void main(String[] args) {
