@@ -33,19 +33,19 @@ public class Nomenclatures implements Serializable{
 	@Column(name ="parent")
 	private String parent;
 	
-	@Column(name ="description")
+	@Column(name ="description",length=2500)
 	private String description;
 	
-	@Column(name ="itemIncludes")
+	@Column(name ="itemIncludes", length=2500)
 	private String itemIncludes;
 	
-	@Column(name ="itemAlsoIncludes")
+	@Column(name ="itemAlsoIncludes", length=2500 )
 	private String itemAlsoIncludes;
 	
 	@Column(name ="rulings")
 	private String rulings;
 	
-	@Column(name ="itemExcludes")
+	@Column(name ="itemExcludes", length=2500)
 	private String itemExcludes;
 	
 	@Column(name ="referenceToISIC")

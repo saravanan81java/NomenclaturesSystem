@@ -1,6 +1,7 @@
 package com.nomenclatureapps.exercise.service;
 
 import java.io.Serializable;
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -31,7 +32,11 @@ public class NomencaltureServiceImpl implements NomencaltureService, Serializabl
 			List<Nomenclatures> list = nomenclaturesRepository.findByOrderId( nomencal.getOrderId());
 			if(list.isEmpty())
 			{
+				try {
 				nomenclaturesRepository.save(nomencal);
+				}catch (Exception e) {
+					e.getCause().printStackTrace();
+				}
 			}
 		});
 		
